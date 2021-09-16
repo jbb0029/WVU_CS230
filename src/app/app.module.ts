@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { BodyComponent } from './body/body.component';
 import { LayoutMainComponent } from './layout/layout-main.component';
 import { RecommendedComponent } from './recommended/recommended.component';
+import { FeaturedComponent } from './featured/featured.component';
+import { FeaturedCardComponent } from './featured/cards.component';
 
 
 
@@ -24,7 +26,9 @@ import { RecommendedComponent } from './recommended/recommended.component';
     GamesComponent,
     BodyComponent,
     LayoutMainComponent,
-    RecommendedComponent
+    RecommendedComponent,
+    FeaturedComponent,
+    FeaturedCardComponent
   ],
   imports: [
     BrowserModule,
