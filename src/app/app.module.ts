@@ -13,7 +13,14 @@ import { LayoutMainComponent } from './layout/layout-main.component';
 import { RecommendedComponent } from './recommended/recommended.component';
 import { FeaturedComponent } from './featured/featured.component';
 import { FeaturedCardComponent } from './featured/cards.component';
-
+import { DiabloIIComponent } from './diabloII/diabloII.component';
+import { DiabloIILayoutComponent } from './diabloII/diabloII-layout.component';
+import { WarzoneComponent } from './warzone/warzone.component';
+import { WarzoneLayoutComponent } from './warzone/warzone-layout.component';
+import { HearthstoneLayoutComponent } from './hearthstone/hearthstone-layout.component';
+import { HearthstoneComponent } from './hearthstone/hearthstone.component';
+import { VanguardComponent } from './vanguard/vanguard.component';
+import { VanguardLayoutComponent } from './vanguard/vanguard-layout.component';
 
 
 @NgModule({
@@ -28,7 +35,15 @@ import { FeaturedCardComponent } from './featured/cards.component';
     LayoutMainComponent,
     RecommendedComponent,
     FeaturedComponent,
-    FeaturedCardComponent
+    FeaturedCardComponent,
+    DiabloIIComponent,
+    DiabloIILayoutComponent,
+    WarzoneComponent,
+    WarzoneLayoutComponent,
+    HearthstoneLayoutComponent,
+    HearthstoneComponent,
+    VanguardComponent,
+    VanguardLayoutComponent
   ],
   imports: [
     BrowserModule,
