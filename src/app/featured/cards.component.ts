@@ -7,7 +7,10 @@ import { Component, Input } from "@angular/core";
 export class FeaturedCardComponent {
     @Input()
     title! :string;
+    @Input()
     description! :string;
+    @Input()
     price! :string;
+    @Input()
     imagePath! :string;
 }

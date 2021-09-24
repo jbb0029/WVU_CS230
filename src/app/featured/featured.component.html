@@ -1,6 +1,8 @@
 <div class="container-fluid bg-dark">
     <div class="d-flex flex-row">
-        <div *ngFor="center">
-            <featured-card></featured-card>
+        <div *ngFor="let card of cards">
+            
+            <featured-card imagePath={{card.imagePath}} title={{card.title}} price={{card.price}}></featured-card>
+            
         </div>
     </div>

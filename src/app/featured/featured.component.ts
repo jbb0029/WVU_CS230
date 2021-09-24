@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Card } from "./card.model";
 import { mock_featured } from "./mock-featured";
 
@@ -6,10 +6,11 @@ import { mock_featured } from "./mock-featured";
     selector: "app-featured",
     templateUrl: "featured.component.html"
 })
-export class FeaturedComponent{
+export class FeaturedComponent implements OnInit{
+
     cards:Card[] = [];
 
-    constructor() {
+    ngOnInit(): void {
         for (var card of mock_featured) {
             this.cards.push(new Card(card));
         }
