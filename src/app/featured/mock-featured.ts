@@ -10,6 +10,12 @@ export const mock_featured = [
         description: "For a limited time...",
         price: "Learn More",
         imagePath: "./assets/promoCard.jpg"
+    },
+    {
+        title: "World of Warcraft: Free Trial",
+        description: "Play free up to level 20!",
+        price: "Play For Free",
+        imagePath: "./assets/dragonCard.jpg"
     }
 
 ]
