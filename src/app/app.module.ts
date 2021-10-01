@@ -21,6 +21,8 @@ import { HearthstoneLayoutComponent } from './hearthstone/hearthstone-layout.com
 import { HearthstoneComponent } from './hearthstone/hearthstone.component';
 import { VanguardComponent } from './vanguard/vanguard.component';
 import { VanguardLayoutComponent } from './vanguard/vanguard-layout.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserInfoComponent } from './header/user-info.component';
 
 
 @NgModule({
@@ -43,11 +45,13 @@ import { VanguardLayoutComponent } from './vanguard/vanguard-layout.component';
     HearthstoneLayoutComponent,
     HearthstoneComponent,
     VanguardComponent,
-    VanguardLayoutComponent
+    VanguardLayoutComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
