@@ -56,6 +56,4 @@ import { UserInfoComponent } from './header/user-info.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-
- }
+export class AppModule {  }

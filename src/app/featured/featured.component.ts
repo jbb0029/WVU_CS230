@@ -1,23 +1,44 @@
 import { Component, OnInit } from "@angular/core";
-import { UserInfoService } from "../body/user-info.service";
+
 import { Card } from "./card.model";
 import { mock_featured } from "./mock-featured";
+import { FeaturedCardData } from "./featured.service";
 
 @Component({
     selector: "app-featured",
     templateUrl: "featured.component.html"
 })
+// export class FeaturedComponent implements OnInit{
+
+//     cards:Card[] = [];
+
+
+//     ngOnInit(): void {
+//         for (var card of FeaturedCardData) {
+//             this.cards.push(new Card(card));
+//         }
+//     }
+// }
 export class FeaturedComponent implements OnInit{
+    cardData: Card[] = [];
 
-    cards:Card[] = [];
-
-    constructor(private userinfo: UserInfoService){
-        
+    constructor(private cardDataService:FeaturedCardData){
+    }
+    ngOnInit(): void{
+        console.log("Registering showUserInfo as a subscriber");
+        this.showCardInfo();
     }
 
-    ngOnInit(): void {
-        for (var card of mock_featured) {
-            this.cards.push(new Card(card));
-        }
+    showCardInfo() {
+        this.cardDataService.getCardInfo().subscribe((data:Card[]) => {
+            console.log(data);
+            for (var card of data) {
+                   this.cardData.push(card);
+             }
+            
+        })
     }
+
+    
+    
 }
