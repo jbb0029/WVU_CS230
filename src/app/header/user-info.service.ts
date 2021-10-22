@@ -12,4 +12,10 @@ export class UserInfoService {
     getUserInfo() {
         return this.http.get<UserInfo>(this.baseUrl + this.myInfoEndpoints);
     }
+
+    modifyUserInfo(data:UserInfo){
+        
+        return this.http.put(this.baseUrl + this.myInfoEndpoints, data);
+        //put replaces something in the database, post adds a new thing
+    }
 }

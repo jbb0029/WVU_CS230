@@ -23,6 +23,8 @@ import { VanguardComponent } from './vanguard/vanguard.component';
 import { VanguardLayoutComponent } from './vanguard/vanguard-layout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserInfoComponent } from './header/user-info.component';
+import { EditUserInfoComponent } from './body/edit-user-info.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -46,12 +48,14 @@ import { UserInfoComponent } from './header/user-info.component';
     HearthstoneComponent,
     VanguardComponent,
     VanguardLayoutComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    EditUserInfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
