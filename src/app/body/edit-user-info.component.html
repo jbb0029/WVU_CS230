@@ -1,20 +1,21 @@
 <div class= "container">
     <div class="row">
-        <div class="col-6">
+        <div class="col-6 pl-5 ml-5">
             <form #postForm="ngForm" (ngSubmit)="onUpdateUserInfo(postForm.value)">
                 <div class="input-group">
-                    <span class="input-group-text">First and last name</span>
-                    <input type="text" class="form-control" ngModel name="FirstName">
-                    <input type="text" class="form-control" ngModel name="LastName">
+                    <span class="input-group-text">Username</span>
+                    <input type="text" class="form-control" ngModel name="UserName">
                 </div>
-
+                &nbsp;
                 <div class="input-group">
-                    <span class="input-group-text">Mix ID</span>
-                    <input type="text" class="form-control" ngModel name="mix_id">
+                    <span class="input-group-text">Password</span>
+                    <input type="text" class="form-control" ngModel name="Password">
                 </div>
-
-                <button class="btn btn-dark" type="submit">
-                    Update User Info
+                <div>
+                    &nbsp;
+                </div>
+                <button class="btn btn-primary" type="submit" style="width:400px;">
+                    Log In
                 </button>
             </form>
         </div>

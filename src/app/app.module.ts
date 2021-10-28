@@ -23,8 +23,10 @@ import { VanguardComponent } from './vanguard/vanguard.component';
 import { VanguardLayoutComponent } from './vanguard/vanguard-layout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserInfoComponent } from './header/user-info.component';
-import { EditUserInfoComponent } from './body/edit-user-info.component';
 import { FormsModule } from '@angular/forms';
+import { LoginLayoutComponent } from './login/login-layout.component';
+import { LoginComponent } from './login/login.component';
+import { LoginInfoComponent } from './body/edit-user-info.component';
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { FormsModule } from '@angular/forms';
     VanguardComponent,
     VanguardLayoutComponent,
     UserInfoComponent,
-    EditUserInfoComponent
+    LoginInfoComponent,
+    LoginLayoutComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
