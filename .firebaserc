@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "battlenet-app": {
+      "hosting": {
+        "battlenet": [
+          "battlenet-app"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "battlenet-app"
+  }
+}

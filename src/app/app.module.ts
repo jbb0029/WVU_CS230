@@ -27,6 +27,10 @@ import { FormsModule } from '@angular/forms';
 import { LoginLayoutComponent } from './login/login-layout.component';
 import { LoginComponent } from './login/login.component';
 import { LoginInfoComponent } from './body/edit-user-info.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import {AngularFireModule } from '@angular/fire/compat';
 
 
 @NgModule({
@@ -59,7 +63,10 @@ import { LoginInfoComponent } from './body/edit-user-info.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase, 'battlenet-app'),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase())
   ],
   providers: [],
   bootstrap: [AppComponent]

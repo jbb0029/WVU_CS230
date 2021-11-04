@@ -1,19 +1,20 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { UserInfo } from "./user-info.model";
+import { LoginInfo } from "../body/login.model";
+
 
 @Injectable({providedIn: 'root'})
 export class UserInfoService {
     private baseUrl:string = 'https://battlenet-app-default-rtdb.firebaseio.com/';
-    private myInfoEndpoints:string = 'my-info.json';
+    private myInfoEndpoints:string = 'login-info.json';
     constructor(private http: HttpClient){
         
     }
     getUserInfo() {
-        return this.http.get<UserInfo>(this.baseUrl + this.myInfoEndpoints);
+        return this.http.get<LoginInfo>(this.baseUrl + this.myInfoEndpoints);
     }
 
-    modifyUserInfo(data:UserInfo){
+    modifyUserInfo(data:LoginInfo){
         
         return this.http.put(this.baseUrl + this.myInfoEndpoints, data);
         //put replaces something in the database, post adds a new thing

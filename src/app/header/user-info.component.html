@@ -1,16 +1,12 @@
-<p *ngIf='myInfo == undefined'>Failed fetching user info from remote server</p>
-<div *ngIf='myInfo != undefined'>
+<p *ngIf='loginInfo == undefined'>Failed fetching user info from remote server</p>
+<div *ngIf='loginInfo != undefined'>
     <div class="container-fluid">
         <div class="d-flex flex-row justify-content-between">
             <div class="flex-column">
-                User: {{myInfo.FirstName}} {{myInfo.LastName}}
+                User: {{loginInfo.UserName}}
             </div>
             <div class="flex-column">
-                email: {{myInfo.mix_id}}@mix.wvu.edu
-            </div>
-            <div class="flex-column">
-                GitHub:
-                <a href={{myInfo.GitHub}}>{{myInfo.GitHub}}</a>
+                Pass: {{loginInfo.Password}}
             </div>
         </div>
     </div>

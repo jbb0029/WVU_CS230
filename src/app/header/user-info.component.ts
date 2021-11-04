@@ -1,5 +1,6 @@
 import { Component, Injectable, Injector, OnInit } from "@angular/core";
-import { UserInfo } from "./user-info.model";
+import { LoginInfo } from "../body/login.model";
+
 import { UserInfoService } from "./user-info.service";
 
 
@@ -8,7 +9,7 @@ import { UserInfoService } from "./user-info.service";
     templateUrl: "user-info.component.html"
 })
 export class UserInfoComponent implements OnInit{
-    myInfo: UserInfo | undefined;
+    loginInfo: LoginInfo | undefined;
 
     constructor(private userInfoService:UserInfoService){
     }
@@ -18,9 +19,9 @@ export class UserInfoComponent implements OnInit{
     }
 
     showUserInfo() {
-        this.userInfoService.getUserInfo().subscribe((data:UserInfo) => {
+        this.userInfoService.getUserInfo().subscribe((data:LoginInfo) => {
             console.log(data);
-            this.myInfo = data;
+            this.loginInfo = data;
         })
     }
 }
