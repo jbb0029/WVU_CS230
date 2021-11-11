@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthComponent } from './auth/auth.component';
 import { DiabloIILayoutComponent } from './diabloII/diabloII-layout.component';
 import { DiabloIIComponent } from './diabloII/diabloII.component';
 import { HearthstoneLayoutComponent } from './hearthstone/hearthstone-layout.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'warzone', component: WarzoneLayoutComponent},
   {path: 'hearthstone', component: HearthstoneLayoutComponent},
   {path: 'vanguard', component: VanguardLayoutComponent},
-  {path: 'login', component: LoginLayoutComponent}
+  {path: 'login', component: LoginLayoutComponent},
+  {path: 'auth', component: AuthComponent},
 ];
 
 @NgModule({

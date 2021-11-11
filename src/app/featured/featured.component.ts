@@ -24,7 +24,8 @@ export class FeaturedComponent implements OnInit{
 
     constructor(private cardDataService:FeaturedCardData){
     }
-    ngOnInit(): void{
+    
+    ngOnInit(): void {
         console.log("Registering showUserInfo as a subscriber");
         this.showCardInfo();
     }
@@ -34,7 +35,7 @@ export class FeaturedComponent implements OnInit{
             console.log(data);
             for (var card of data) {
                    this.cardData.push(card);
-             }
+            }
             
         })
     }
